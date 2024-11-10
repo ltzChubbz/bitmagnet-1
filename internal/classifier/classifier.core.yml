@@ -3,7 +3,7 @@ workflows:
   default:
     # delete torrents containing banned keywords:
     - if_else:
-        condition: "([torrent.baseName] + torrent.files.map(f, f.basePath)).join(' ').matches(keywords.banned)"
+        condition: "([torrent.baseName] + torrent.files.map(f, f.basePath)).join(' ').matches(keywords.delete)"
         if_action: delete
     # try to identify content type for torrents without a hinted content type:
     - if_else:
@@ -197,6 +197,7 @@ keywords:
     - milf*
     - nubile*
     - onlyfans
+    - pornhub
     - orgasm*
     - orgy
     - "*porn*"

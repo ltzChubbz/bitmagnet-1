@@ -99,7 +99,7 @@ The following action will delete a torrent if its name matches the list of`banne
 
 ```yaml
 if_else:
-  condition: "torrent.baseName.matches(keywords.banned)"
+  condition: "torrent.baseName.matches(keywords.delete)"
   if_action: delete
 ```
 
